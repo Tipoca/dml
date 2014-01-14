@@ -1,0 +1,31 @@
+dmlparser.cmi: dmlsyn.cmo 
+dmlcop.cmo: dmldeb.cmo dmlglo.cmo dmlsyn.cmo 
+dmlcop.cmx: dmldeb.cmx dmlglo.cmx dmlsyn.cmx 
+dmldeb.cmo: dmlsyn.cmo 
+dmldeb.cmx: dmlsyn.cmx 
+dmldtc.cmo: dmlcop.cmo dmldeb.cmo dmlglo.cmo dmlpat.cmo dmlsim.cmo dmlsyn.cmo 
+dmldtc.cmx: dmlcop.cmx dmldeb.cmx dmlglo.cmx dmlpat.cmx dmlsim.cmx dmlsyn.cmx 
+dmlglo.cmo: dmlsyn.cmo 
+dmlglo.cmx: dmlsyn.cmx 
+dmlintern.cmo: dmldeb.cmo dmlglo.cmo dmlloc.cmo dmlsyn.cmo 
+dmlintern.cmx: dmldeb.cmx dmlglo.cmx dmlloc.cmx dmlsyn.cmx 
+dmllexer.cmo: dmlparser.cmi 
+dmllexer.cmx: dmlparser.cmx 
+dmlpar.cmo: dmlglo.cmo dmllexer.cmo dmlloc.cmo dmlparser.cmi dmlsyn.cmo 
+dmlpar.cmx: dmlglo.cmx dmllexer.cmx dmlloc.cmx dmlparser.cmx dmlsyn.cmx 
+dmlparser.cmo: dmlsyn.cmo dmlparser.cmi 
+dmlparser.cmx: dmlsyn.cmx dmlparser.cmi 
+dmlpat.cmo: dmlcop.cmo dmldeb.cmo dmlglo.cmo dmlloc.cmo dmlsim.cmo dmlsyn.cmo 
+dmlpat.cmx: dmlcop.cmx dmldeb.cmx dmlglo.cmx dmlloc.cmx dmlsim.cmx dmlsyn.cmx 
+dmlsim.cmo: dmlcop.cmo dmldeb.cmo dmlglo.cmo dmlsyn.cmo 
+dmlsim.cmx: dmlcop.cmx dmldeb.cmx dmlglo.cmx dmlsyn.cmx 
+dmlsol.cmo: dmldeb.cmo dmlglo.cmo dmlsyn.cmo 
+dmlsol.cmx: dmldeb.cmx dmlglo.cmx dmlsyn.cmx 
+dmlsyn.cmo: dmlloc.cmo 
+dmlsyn.cmx: dmlloc.cmx 
+dmltop.cmo: dmldtc.cmo dmlglo.cmo dmlintern.cmo dmlpar.cmo dmlsim.cmo \
+    dmlsol.cmo dmlsyn.cmo dmlvec.cmo 
+dmltop.cmx: dmldtc.cmx dmlglo.cmx dmlintern.cmx dmlpar.cmx dmlsim.cmx \
+    dmlsol.cmx dmlsyn.cmx dmlvec.cmx 
+dmlvec.cmo: dmlcop.cmo dmldeb.cmo dmlglo.cmo dmlsyn.cmo 
+dmlvec.cmx: dmlcop.cmx dmldeb.cmx dmlglo.cmx dmlsyn.cmx 

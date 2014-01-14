@@ -1,0 +1,55 @@
+val abs: {i:int} int(i) -> int(abs(i))
+val uminus: {i:int} int(i) -> int(uminus(i))
+val op+ : {i:int,j:int} int(i) * int(j) -> int(i+j)
+val op- : {i:int,j:int} int(i) * int(j) -> int(i-j)
+val op* : {i:int,j:int} int(i) * int(j) -> int(i*j)
+val op/ : {i:int,j:int} int(i) * int(j) -> int(i/j)
+val op% : {i:int,j:int} int(i) * int(j) -> int(mod (i, j))
+val max: {i:int,j:int} int(i) * int(j) -> int(max(i,j))
+val min: {i:int,j:int} int(i) * int(j) -> int(min(i,j))
+
+val op< : {i:int,j:int} int(i) * int(j) -> bool(i<j)
+val op<= : {i:int,j:int} int(i) * int(j) -> bool(i<=j)
+val op> : {i:int,j:int} int(i) * int(j) -> bool(i>j)
+val op>= : {i:int,j:int} int(i) * int(j) -> bool(i>=j)
+val op= : {i:int,j:int} int(i) * int(j) -> bool(i=j)
+val op<> : {i:int,j:int} int(i) * int(j) -> bool(i<>j)
+
+val char_eq: char * char -> bool
+
+sort sb = {a:int | 0 <= a <= 1}
+
+val op&& : {p:sb,q:sb} bool(p) * bool(q) -> bool(p && q)
+val op|| : {p:sb,q:sb} bool(p) * bool(q) -> bool(p || q)
+
+val alloc: ('a).{n:nat} int(n) * 'a -> 'a array(n)
+val arraysize: ('a).{n:nat} 'a array(n) -> int(n)
+val sub: ('a).{n:int,i:nat | i<n} 'a array(n) * int(i) -> 'a
+val update: ('a).{n:int,i:nat | i<n} 'a array(n) * int(i) * 'a -> unit
+
+val print_char: char -> unit
+val print_int: int -> unit
+val print_float: float -> unit
+val print_string: string -> unit
+val print_newline: unit -> unit
+
+val float_of_int: float -> int
+val int_of_float: int -> float
+
+val sin: float -> float
+val cos: float -> float
+val tan: float -> float
+val cot: float -> float
+
+datatype 'a list with nat =
+  nil(0) | {n:nat} cons(n+1) of 'a * 'a list(n)
+
+val length: ('a).{n:nat} 'a list(n) -> int(n)
+val reverse: ('a).{n:nat} 'a list(n) -> 'a list(n)
+val revApp: ('a).{m:nat,n:nat} 'a list(m) * 'a list(n) -> 'a list(m+n)
+val op@: ('a).{m:nat, n:nat} 'a list(m) * 'a list(n) -> 'a list(m+n)
+val explode: string -> char list
+
+val exit: ('a).unit -> 'a
+
+datatype 'a option with sb = NONE(0) | SOME(1) of 'a

@@ -1,0 +1,65 @@
+decaml.ececs.uc.edu ~> cd DML
+decaml.ececs.uc.edu ~/DML> make
+ocamlyacc -v dmlparser.mly
+3 rules never reduced
+24 shift/reduce conflicts.
+ocamlc  -c dmlloc.ml
+ocamlc  -c dmlsyn.ml
+ocamlc  -c dmlparser.mli
+ocamlc  -c dmlparser.ml
+ocamlc  -c dmldeb.ml
+ocamlc  -c dmlglo.ml
+ocamlc  -c dmlcop.ml
+ocamlc  -c dmlsim.ml
+ocamlc  -c dmlpat.ml
+ocamlc  -c dmldtc.ml
+ocamlc  -c dmlintern.ml
+ocamllex dmllexer.mll
+84 states, 752 transitions, table size 3512 bytes
+ocamlc  -c dmllexer.ml
+ocamlc  -c dmlpar.ml
+ocamlc  -c dmlsol.ml
+ocamlc  -c dmlvec.ml
+ocamlc  -c dmltop.ml
+decaml.ececs.uc.edu ~/DML> ocaml
+        Objective Caml version 2.02
+
+# #use "load";;
+The program has been successfully parsed.
+# Dmltop.top "bsearch";;
+The program has been successfully parsed.
+The program is in internal representation.
+type constraints are collected.
+btv solving is done.
+biv solving is done.
+iveclistlist: 40
+dependent type checking is successfully done!
+- : unit = ()
+# Dmltop.top "mergesort";;
+The program has been successfully parsed.
+The program is in internal representation.
+type constraints are collected.
+btv solving is done.
+biv solving is done.
+iveclistlist: 156
+dependent type checking is successfully done!
+- : unit = ()
+# Dmltop.top "rbtree2";;
+The program has been successfully parsed.
+The program is in internal representation.
+type constraints are collected.
+btv solving is done.
+biv solving is done.
+iveclistlist: 1632
+dependent type checking is successfully done!
+- : unit = ()
+# Dmltop.top "set";;
+The program has been successfully parsed.
+The program is in internal representation.
+type constraints are collected.
+btv solving is done.
+biv solving is done.
+iveclistlist: 602
+dependent type checking is successfully done!
+- : unit = ()
+# 

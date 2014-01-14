@@ -1,0 +1,22 @@
+#load "dmlloc.cmo";;
+#load "dmlsyn.cmo";;
+#load "dmlparser.cmo";;
+#load "dmllexer.cmo";;
+#load "dmlglo.cmo";;
+#load "dmldeb.cmo";;
+#load "dmlintern.cmo";;
+#load "dmlcop.cmo";;
+(*
+#load "dmletc.cmo";;
+*)
+#load "dmlsim.cmo";;
+#load "dmlpat.cmo";;
+#load "dmldtc.cmo";;
+#load "dmlvec.cmo";;
+#load "dmlsol.cmo";;
+(*
+#load "dmltrans0.cmo";;
+#load "dmlinterp0.cmo";;
+*)
+#load "dmlpar.cmo";;
+#load "dmltop.cmo";;
